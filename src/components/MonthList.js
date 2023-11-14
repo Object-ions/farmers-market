@@ -1,5 +1,5 @@
 import React from "react";
-import Month from "./Month";
+// import Month from "./Month";
 
 const MonthList = () => {
 
@@ -275,14 +275,15 @@ const MonthList = () => {
   return (
     <React.Fragment>
       <hr/>
-      {mainTicketList.map((produce, index) =>
+      {/* {availableProduce.map((produce, index) =>
         <Month 
           month={produce.month}
           selection={produce.selection}
           key={index}/>
-        )}
+        )} */}
+        <div>This is our list.</div>
     </React.Fragment>
   );
 }
 
-export default AvailableProduce;
+export default MonthList;
