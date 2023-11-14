@@ -273,20 +273,21 @@ const MonthList = (props) => {
     }
   ];
 
-
  const selectedProduce = availableProduce.filter((element) => element.month === props.selectedMonth);
-
 
  let result;
 
- if(props.selectedMonth){
-  result =   <ul>
-  {selectedProduce[0].selection.map((select, index) =>
-    <li key={index}>{select}</li>
-  )}
-</ul>
- } 
-
+  if(props.selectedMonth) {
+    result = 
+    <div>
+      <h2>Produce for the month of {props.selectedMonth}</h2>
+      <ul>
+        {selectedProduce[0].selection.map((produce, index) =>
+        <li key={index}>{produce}</li>
+        )}
+      </ul>
+    </div>
+  } 
 
   return (
     <React.Fragment>
@@ -308,12 +309,4 @@ MonthList.propTypes = {
 };
 
 export default MonthList;
-
- // const selectedProduce = 
-
-  // <ul>
-  //   {props.selection.map((select, index) =>
-  //     <li key={index}>{select}</li>
-  //   )}
-  // </ul>
 

@@ -11,7 +11,6 @@ class MonthControl extends React.Component {
     };
   }
 
-  // pass in   month into this parameter ?
   handleClick = (event) => {
     const month = event.target.textContent;
 
@@ -20,27 +19,15 @@ class MonthControl extends React.Component {
     });
   }
 
-
-
   render(){
-    // let currentlyVisibleState = null;
-
-    // if (this.state.selectedMonth) {
-    //   currentlyVisibleState = <NewTicketForm />
-    // } else {
-    //   currentlyVisibleState = <TicketList />
-    // }
 
     return (
       <React.Fragment>
-        {/* {currentlyVisibleState} */}
-        {/* <button onClick={this.handleClick}>{buttonText}</button> */}
         <MonthList selectedMonth={this.state.selectedMonth} onClick={this.handleClick} />
       </React.Fragment>
     );
   }
 
 }
-
 
 export default MonthControl;
