@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Month.css";
 
 function Month(props) {
 
@@ -13,7 +14,7 @@ function Month(props) {
 
   return (
     <div className="month-buttons">
-      <button>{props.month}</button>
+      <button className="month-button">{props.month}</button>
       {/* {selectedProduce} */}
     </div>
   );

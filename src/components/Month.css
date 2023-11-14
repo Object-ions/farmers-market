@@ -1,0 +1,22 @@
+.month-buttons {
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  width: 30%;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+
+.month-button {
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.month-button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.month-button:active {
+  transform: translateY(1.5px);
+}
