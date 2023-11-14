@@ -3,18 +3,13 @@ import PropTypes from "prop-types";
 
 function Month(props) {
 
+  const selectedProduce = 
 
-
-
-
-
-const selectedProduce = 
-
-<ul>
-  {props.selection.map((select, index) =>
-    <li key={index}>{select}</li>
-  )}
-</ul>
+  <ul>
+    {props.selection.map((select, index) =>
+      <li key={index}>{select}</li>
+    )}
+  </ul>
 
   return (
     <React.Fragment>
