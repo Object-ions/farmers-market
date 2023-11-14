@@ -275,13 +275,12 @@ const MonthList = () => {
   return (
     <React.Fragment>
       <hr/>
-      {/* {availableProduce.map((produce, index) =>
+      {availableProduce.map((produce, index) =>
         <Month 
           month={produce.month}
           selection={produce.selection}
           key={index}/>
-        )} */}
-        <div>This is our list.</div>
+        )}
     </React.Fragment>
   );
 }
