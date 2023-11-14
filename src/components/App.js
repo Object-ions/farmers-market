@@ -1,14 +1,18 @@
 import React from "react";
 import Header from "./Header";
-import MonthList from "./MonthList";
+import MonthControl from "./MonthControl";
 
 function App(){
   return ( 
     <React.Fragment>
       <Header />
-      <MonthList/>
+      <MonthControl/>
     </React.Fragment>
   );
 }
 
 export default App;
+
+
+
+

@@ -1,7 +1,8 @@
 import React from "react";
 import Month from "./Month";
+import PropTypes from "prop-types";
 
-const MonthList = () => {
+const MonthList = (props) => {
 
   const availableProduce = [
     {
@@ -272,17 +273,47 @@ const MonthList = () => {
     }
   ];
 
+
+ const selectedProduce = availableProduce.filter((element) => element.month === props.selectedMonth);
+
+
+ let result;
+
+ if(props.selectedMonth){
+  result =   <ul>
+  {selectedProduce[0].selection.map((select, index) =>
+    <li key={index}>{select}</li>
+  )}
+</ul>
+ } 
+
+
   return (
     <React.Fragment>
       <hr/>
       {availableProduce.map((produce, index) =>
         <Month 
           month={produce.month}
-          selection={produce.selection}
-          key={index}/>
+          selection={selectedProduce}
+          key={index}
+          onClick={props.onClick} />
         )}
+        {result}
     </React.Fragment>
   );
 }
 
+MonthList.propTypes = {
+  onClick: PropTypes.func,
+};
+
 export default MonthList;
+
+ // const selectedProduce = 
+
+  // <ul>
+  //   {props.selection.map((select, index) =>
+  //     <li key={index}>{select}</li>
+  //   )}
+  // </ul>
+

@@ -4,25 +4,19 @@ import "./Month.css";
 
 function Month(props) {
 
-  // const selectedProduce = 
-
-  // <ul>
-  //   {props.selection.map((select, index) =>
-  //     <li key={index}>{select}</li>
-  //   )}
-  // </ul>
-
   return (
     <div className="month-buttons">
-      <button className="month-button">{props.month}</button>
-      {/* {selectedProduce} */}
+      <button className="month-button" onClick={props.onClick}>{props.month}</button>
     </div>
   );
 }
 
 Month.propTypes = {
   month: PropTypes.string.isRequired,
-  selection: PropTypes.array
+  selection: PropTypes.array,
+  onClick: PropTypes.func
 };
 
 export default Month;
+
+

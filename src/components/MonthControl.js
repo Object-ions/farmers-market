@@ -7,33 +7,35 @@ class MonthControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // selectedMonth: null ?
-      formVisibleOnPage: false
+      selectedMonth: null 
     };
   }
 
   // pass in   month into this parameter ?
-  handleClick = () => {
-    this.setState(prevState => ({
-      // selectedMonth: month <--- parameter for handleClick
-      formVisibleOnPage: !prevState.formVisibleOnPage
-    }));
+  handleClick = (event) => {
+    const month = event.target.textContent;
+
+    this.setState({ 
+      selectedMonth: month
+    });
   }
 
+
+
   render(){
-    let currentlyVisibleState = null;
-    let buttonText = null;
-    if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewTicketForm />
-      buttonText = "Return to Ticket List";
-    } else {
-      currentlyVisibleState = <TicketList />
-      buttonText = "Add Ticket";
-    }
+    // let currentlyVisibleState = null;
+
+    // if (this.state.selectedMonth) {
+    //   currentlyVisibleState = <NewTicketForm />
+    // } else {
+    //   currentlyVisibleState = <TicketList />
+    // }
+
     return (
       <React.Fragment>
-        {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        {/* {currentlyVisibleState} */}
+        {/* <button onClick={this.handleClick}>{buttonText}</button> */}
+        <MonthList selectedMonth={this.state.selectedMonth} onClick={this.handleClick} />
       </React.Fragment>
     );
   }
@@ -41,4 +43,4 @@ class MonthControl extends React.Component {
 }
 
 
-export default TicketControl;
+export default MonthControl;
