@@ -1,4 +1,4 @@
-# Farmers MArket
+# Farmers Market
 
 A single-page web application built with React.
 
