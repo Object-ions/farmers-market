@@ -66,5 +66,4 @@ return (
 );
 }
 
-
 export default MarketSchedule;
