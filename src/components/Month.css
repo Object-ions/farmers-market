@@ -1,8 +1,7 @@
 .month-buttons {
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
-  width: 30%;
+  width: 100%;
   margin-top: 7px;
   margin-left: 10px;
 }
@@ -10,6 +9,7 @@
 .month-button {
   border-radius: 10px;
   transition: all 0.3s;
+  box-shadow: 1px 5px 10px 1px rgb(255, 238, 0);
 }
 
 .month-button:hover {

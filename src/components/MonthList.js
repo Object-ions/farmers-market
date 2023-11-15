@@ -1,6 +1,7 @@
 import React from "react";
 import Month from "./Month";
 import PropTypes from "prop-types";
+import "./MonthList.css";
 
 const MonthList = (props) => {
 
@@ -279,7 +280,7 @@ const MonthList = (props) => {
 
   if(props.selectedMonth) {
     result = 
-    <div>
+    <div className="container-result">
       <h2>Produce for the month of {props.selectedMonth}</h2>
       <ul>
         {selectedProduce[0].selection.map((produce, index) =>
@@ -291,21 +292,25 @@ const MonthList = (props) => {
 
   return (
     <React.Fragment>
-      <hr/>
-      {availableProduce.map((produce, index) =>
+    <hr/>
+    <div className="container">
+      <div className="container-buttons">
+        {availableProduce.map((produce, index) =>
         <Month 
           month={produce.month}
           selection={selectedProduce}
           key={index}
           onClick={props.onClick} />
         )}
+      </div>
         {result}
+    </div>
     </React.Fragment>
   );
 }
 
 MonthList.propTypes = {
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 };
 
 export default MonthList;
