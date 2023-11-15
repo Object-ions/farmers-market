@@ -2,7 +2,9 @@
 
 A single-page web application built with React.
 
-<img src="./src/img/social-media.jpg">
+<img src="./src/img/farmers-market.png">
+
+> #### Diagram
 
 ## Technologies Used
 
